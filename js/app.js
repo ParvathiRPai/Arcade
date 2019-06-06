@@ -63,7 +63,7 @@ if(player.y<20)
 {
     score++;
     document.getElementById('playerScore').innerHTML = score;
-    if(score==4)
+    if(score==15)
     {
         end=new Date().getMinutes();
         congratulations();
