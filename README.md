@@ -10,6 +10,6 @@ Link to the game : [demo](https://parvathirpai.github.io/Arcade/)
 ## How to play game
 
 * Use the **arrow keys** to move the player around the map.
-* Reach the water (top of the map shown in blue) and gain a points.
+* Reach the water (top of the map shown in blue) and gain points.
 
 ![Arcade](images/demo.JPG)
