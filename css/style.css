@@ -32,6 +32,7 @@ h2{
   .button2 {
     background-color: white; 
     color: black; 
+    float: right;
     border: 2px solid #008CBA;
   }
   
@@ -39,3 +40,9 @@ h2{
     background-color: #008CBA;
     color: white;
   }  
+
+  .score-panel {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
