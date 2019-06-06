@@ -2,7 +2,7 @@
 //  Bugs the player must avoid 
 var score=0;
 document.getElementById('playerScore').innerHTML = score;
-  
+var start=new Date().getMinutes();
 var Bug=function(x,y, speed)
 {
     // x and y determine x,y axis speed of the enemy
@@ -57,12 +57,18 @@ var Player=function(x,y)
     this.y=y;
     this.player='images/char-horn-girl.png';
 }
-
+var end;
 Player.prototype.update = function (dt) {
 if(player.y<20)
 {
     score++;
     document.getElementById('playerScore').innerHTML = score;
+    if(score==4)
+    {
+        end=new Date().getMinutes();
+        congratulations();
+        score=0;
+    }
 	this.reset();
 }
 
@@ -144,3 +150,15 @@ var allowedKeys={
 player.handleInput(allowedKeys[e.keyCode]);
 });
 
+function congratulations()
+{
+    var time=end-start;
+    alert(" Congratulations you win !! Total time taken to complete : " + time + "min"); 
+    score=0;
+    document.getElementById('playerScore').innerHTML = score;
+}
+function info()
+{
+    alert('Welcome to Escape Lady Bird !! '+
+    ' 1) Score == 15 Player Wins Game ' + ' 2) Bug Bite score score count decrements by 1 '+' 3) score < 0 play again :)');
+}
